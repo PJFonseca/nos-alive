@@ -5,7 +5,7 @@
 {% for concerto in concertos %}
 <h3>{{concerto.palco}}</h3>
         <article class="card">
-            <a href="">{{ concerto.banda.nome }} - {{ concerto.dia }}, {{ concerto.hora }}</a>
+            <a href="{% url 'concerto' concerto.id %}">{{ concerto.banda.nome }} - {{ concerto.dia }}, {{ concerto.hora }}</a>
         </article>
 {% endfor %}
 
