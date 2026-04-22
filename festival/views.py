@@ -18,6 +18,11 @@ def palcos_view(request):
     context = {'palcos': palcos}
     return render(request, 'festival/palcos.html', context)
 
+def concertos_view(request):
+    concertos = Concerto.objects.all()
+    context = {'concertos': concertos}
+    return render(request, 'festival/concertos.html', context)
+
 def concerto_view(request, id):
     concerto = Concerto.objects.get(id=id)
     context = {'concerto': concerto}
